@@ -1,10 +1,8 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:weather_app/features/WeatherInfo/ui/weather.dart';
-import 'package:flutter_dotenv/flutter_dotenv.dart';
 
-
-final API_KEY = dotenv.env['API_KEY'];
+const API_KEY = "your_api_key";
 Future<Weather> fetchWeather(String location) async {
   final response = await http.get(Uri.parse(
       'https://api.weatherapi.com/v1/current.json?key=$API_KEY&q=$location&aqi=no'));

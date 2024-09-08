@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:weather_app/features/Home/ui/home.dart';
 
-void main() {
+Future<void> main() async{
+
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
     initialRoute: 'home',
